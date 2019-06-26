@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,16 @@
   },
   "devDependencies": {
     "eslint": "^6.0.1"
-  }
+  },
+      "nodemonConfig": {
+      "restartable": "rs",
+      "ignore": [
+        "node_modules/**/node_modules"
+      ],
+      "delay": "2500",
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": 4000
+      }
+    }
 }
